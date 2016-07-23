@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+            <meta content="IE=edge" http-equiv="X-UA-Compatible">
+                <meta content="width=device-width, initial-scale=1" name="viewport">
+                    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+                    <meta content="" name="description">
+                        <meta content="" name="author">
+                            <title>
+                                Arthur Marques
+                            </title>
+                            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js">
+                            </script>
+                            <!-- Bootstrap -->
+                            <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" rel="stylesheet">
+                                <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" rel="stylesheet">
+                                    <script crossorigin="anonymous" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js">
+                                    </script>
+                                    <script src="https://use.fontawesome.com/56e4a2975a.js">
+                                    </script>
+                                    <link href="css/starter-template.css" rel="stylesheet">
+                                        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+                                        <script src="js/libs/angular-route.min.js"></script>
+                                        <script src="js/libs/angular-ui-router.min.js"></script>
+                                        <script src="js/app.js"></script>                                        
+                                        <script src="js/services/UBCService.js"></script>                                        
+                                        <script src="js/controllers/UBCController.js"></script>                                        
+
+                                        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+                                        <!--[if lt IE 9]>
+                                        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+                                        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+                                        <![endif]-->
+                                    </link>
+                                </link>
+                            </link>
+                        </meta>
+                    </meta>
+                </meta>
+            </meta>
+        </meta>
+    </head>
+    <body ng-app="myApp">
+        <div class="container-fluid">
+          <div ng-controller="UBCController as ubcCtrl">
+
+            <!-- HEADER --> 
+            <div class="row" style="text-align: center">
+            <div class="row">
+                <img alt="Arthur Marques" class="img-circle" height="100" src="https://en.gravatar.com/userimage/89392798/3c8d2ae5e4ff6744b5152bd547cf3579.jpg?size=200"></img>
+            </div>
+            <div class="row"><h3>Arthur Marques</h3></div>
+            <div class="row"><h6>A funny phrase should be here ¯\_(ツ)_/¯</h6></div>
+            <div class="text-center">
+                <a class="btn btn-social-icon btn-github" target="_blank" href={{ubcCtrl.links.github}}><i class="fa fa-github"></i></a>
+                <a class="btn btn-social-icon btn-linkedin" target="_blank" href={{ubcCtrl.links.linkedin}}><i class="fa fa-linkedin"></i></a>
+                <a class="btn btn-social-icon btn-instagram" target="_blank" href={{ubcCtrl.links.instagram}}><i class="fa fa-instagram"></i></a>
+                <a class="btn btn-social-icon btn-facebook" target="_blank" href={{ubcCtrl.links.facebook}} ><i class="fa fa-facebook"></i></a>
+                <a class="btn btn-social-icon btn-google-plus" target="_blank" href={{ubcCtrl.links.plus}}><i class="fa fa-google-plus"></i></a>
+            </div>
+            <hr width="30%"></hr>
+            <div class="row">                    
+                <button class="btn btn-primary" type="button" data-ng-click="ubcCtrl.goTo('/')"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</button>
+                <button class="btn btn-warning" type="button" data-ng-click="ubcCtrl.goTo('/publications')">Publications</button>
+                <button class="btn btn-success" type="button" data-ng-click="ubcCtrl.getCV()">Curriculum</button>
+                <button class="btn btn-default" type="button" data-ng-click="ubcCtrl.goTo('/about')">About me</button>                    
+                
+            </div>
+            <hr width="70%" noshade></hr>
+            </div>
+                
+            
+            <br>
+
+            <!-- BODY --> 
+            <div data-ng-view></div>
+               
+            <!-- FOOTER --> 
+            <div>
+                <hr width="70%">
+                    <div class="inner">
+                        <p class="text-center">
+                          <span aria-hidden="true" class="glyphicon glyphicon-copyright-mark"></span>
+                          Arthur Marques
+                        </p>
+                        <p class="text-center">
+                          <span aria-hidden="true" class="glyphicon glyphicon-envelope"></span>
+                          marques.art@gmail.com
+                        </p>
+                    </div>
+                </hr>
+            </div>
+          </div>
+        </div>
+    </body>
+</html>
